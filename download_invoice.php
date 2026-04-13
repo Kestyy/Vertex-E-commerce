@@ -118,4 +118,4 @@ $mpdf = new \Mpdf\Mpdf([
 
 ob_end_clean(); // ADD THIS BEFORE OUTPUT
 $mpdf->WriteHTML($html);
-$mpdf->Output("Invoice-{$orderNum}.pdf", 'D');
+$mpdf->Output("Invoice-{$orderNum}.pdf"   , 'D');
