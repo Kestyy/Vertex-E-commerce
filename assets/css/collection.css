@@ -1,0 +1,200 @@
+/* ══════════════════════════════════════════
+   COLLECTION PAGE — assets/css/collection.css
+══════════════════════════════════════════ */
+
+/* ── PAGE WRAPPER ── */
+.coll-page {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+}
+
+/* ══ HERO HEADER ══ */
+.coll-hero {
+    position: relative;
+    background: linear-gradient(135deg, #e8f0fe 0%, #f0f4ff 40%, #e4eefb 100%);
+    text-align: center;
+    padding: 35px 25px;
+    overflow: hidden;
+    border-bottom: 1px solid #d6e4f7;
+}
+.coll-hero::before {
+    content: '';
+    position: absolute;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(99,155,255,0.18) 0%, transparent 70%);
+    top: -80px; left: -60px;
+    pointer-events: none;
+}
+.coll-hero::after {
+    content: '';
+    position: absolute;
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139,92,246,0.1) 0%, transparent 70%);
+    bottom: -60px; right: -40px;
+    pointer-events: none;
+}
+.coll-hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #3b82f6;
+    background-clip: text;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+    line-height: 1.15;
+}
+.coll-hero-sub {
+    font-size: 14px;
+    color: #6b7faa;
+    font-weight: 400;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+.coll-hero-bc {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.6);
+    border: 1px solid rgba(180,205,255,0.5);
+    backdrop-filter: blur(6px);
+    border-radius: 30px;
+    padding: 6px 18px;
+    font-size: 13px;
+    color: #8aa0c8;
+    position: relative;
+    z-index: 1;
+}
+.coll-hero-bc a {
+    color: #7a99cc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color .2s;
+}
+.coll-hero-bc a:hover { color: #3b82f6; }
+.coll-bc-sep { color: #b0c4e8; font-size: 12px; }
+
+/* ══ BROWSE SECTION HEADER ══ */
+.browse-header {
+    margin-bottom: 24px;
+}
+.browse-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+    letter-spacing: -0.02em;
+}
+
+/* ══ SLIDER WRAPPER ══ */
+.browse-slider-wrap {
+    overflow: hidden;
+    position: relative;
+}
+
+.browse-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Each card takes exactly 1/3 of the container minus gaps */
+    --gap: 20px;
+    --cols: 3;
+}
+
+/* ══ BROWSE CARD ══ */
+.browse-card {
+    flex: 0 0 calc((100% - var(--gap) * (var(--cols) - 1)) / var(--cols));
+    min-width: 0;
+    border-radius: 14px;      /* slightly tightened */
+    overflow: hidden;
+    background: #f3f5fa;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e8eaef;
+    transition: transform 0.22s cubic-bezier(0.4,0,0.2,1),
+                box-shadow 0.22s cubic-bezier(0.4,0,0.2,1);
+}
+.browse-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.12);
+}
+
+/* ── Image area ── */
+.browse-card-img {
+    width: calc(100% - 12px);  /* reduced margin from 8px → 6px each side */
+    aspect-ratio: 5 / 3;       /* slightly less tall than the original 4/3 */
+    overflow: hidden;
+    background: #e5e7eb;
+    border-radius: 11px;
+    margin: 6px;
+    flex-shrink: 0;
+}
+.browse-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.38s cubic-bezier(0.4,0,0.2,1);
+}
+.browse-card:hover .browse-card-img img {
+    transform: scale(1.04);
+}
+
+/* ── Text body ── */
+.browse-card-body {
+    padding: 10px 14px 16px;   /* reduced from 14px 16px 20px */
+    background: #ffffff;
+    flex: 1;
+}
+.browse-card-name {
+    font-size: 15px;            /* slightly reduced from 16px */
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 4px;         /* tightened from 6px */
+    letter-spacing: -0.01em;
+}
+.browse-card-name a,
+.browse-card:hover .browse-card-name {
+    color: #2563eb;
+}
+.browse-card-desc {
+    font-size: 12.5px;          /* slightly reduced from 13px */
+    color: #6b7280;
+    line-height: 1.55;
+    font-weight: 400;
+}
+
+/* ══ DOT INDICATORS ══ */
+.browse-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 28px;
+}
+.browse-dot {
+    width: 28px;
+    height: 7px;
+    border-radius: 4px;
+    border: none;
+    background: #d1d5db;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s, width 0.2s;
+}
+.browse-dot.active {
+    background: #2563eb;
+    width: 42px;
+}
+
+/* ══ RESPONSIVE ══ */
+@media (max-width: 960px) {
+    .browse-track { --cols: 2; }
+}
+@media (max-width: 600px) {
+    .browse-track { --cols: 1; }
+    .coll-hero-title { font-size: 32px; }
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Head -->
+  <circle cx="48" cy="30" r="16"/>
+  
+  <!-- Body -->
+  <path d="M20 78c0-14 12-24 28-24s28 10 28 24"/>
+</svg>

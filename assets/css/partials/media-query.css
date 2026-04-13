@@ -1,0 +1,199 @@
+/* ══════════════════════════════════════════
+   MEDIA QUERIES
+══════════════════════════════════════════ */
+
+@media (max-width: 992px) {
+
+    /* ── Hero ── */
+    .hero-section.hero-digistyle {
+        height: auto !important;
+        min-height: auto !important;
+        overflow: visible !important;
+        padding: 100px 1.5rem 60px !important;
+        margin-bottom: 30px;
+    }
+
+    .hero-section.hero-digistyle #heroCarousel,
+    .hero-section.hero-digistyle .carousel-inner,
+    .hero-section.hero-digistyle .carousel-item,
+    .hero-section.hero-digistyle .hero-slide {
+        height: auto !important;
+        min-height: auto !important;
+    }
+
+    .hero-section.hero-digistyle .row {
+        flex-direction: column !important;
+    }
+
+    .hero-section.hero-digistyle .col-lg-6 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+
+    .hero-shapes { display: none; }
+
+    .hero-section.hero-digistyle .carousel-control-prev,
+    .hero-section.hero-digistyle .carousel-control-next {
+        display: none !important;
+    }
+
+    .hero-content {
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-kicker {
+        font-size: 0.7rem;
+        margin-bottom: 6px;
+        letter-spacing: 0.1em;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+        line-height: 1.15;
+        margin-bottom: 8px;
+    }
+
+    .hero-sub {
+        font-size: 0.9rem;
+        max-width: 100%;
+        margin-bottom: 14px;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .hero-actions .btn-hero {
+        flex: 0 1 auto !important;
+        width: auto !important;
+        min-width: 130px;
+        justify-content: center;
+    }
+
+    .hero-product {
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-product-img {
+        width: 100%;
+        max-width: 300px;
+        transform: none;
+        display: block;
+    }
+
+    .hero-price {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 10px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 16px;
+    }
+
+    .hero-price .price { font-size: 1.15rem; }
+
+    .hero-section.hero-digistyle .carousel-indicators { bottom: 12px; }
+
+    /* ── Categories ── */
+    .cat-track {
+        gap: 12px;
+        padding-left: 4px !important;
+        padding-right: 4px !important;
+    }
+
+    .cat-card {
+        flex: 0 0 calc(50% - 10px) !important;
+        box-sizing: border-box;
+        min-width: 0;
+    }
+
+    /* ── Featured Products ── */
+    .product-image-wrap { height: 200px; }
+}
+
+/* ── 5 equal columns on desktop ── */
+@media (min-width: 992px) {
+    .featured-section .col-lg {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* ── Hero ── */
+    .hero-section.hero-digistyle {
+        padding: 85px 1.25rem 50px !important;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+        line-height: 1.2;
+        margin-bottom: 8px;
+    }
+
+    .hero-sub {
+        font-size: 0.9rem;
+        margin-bottom: 14px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-actions .btn-hero {
+        width: 100% !important;
+        max-width: 320px;
+        flex: unset !important;
+    }
+
+    .hero-product-img { max-width: 240px; }
+
+    .hero-price .price { font-size: 1.1rem; }
+
+    .hero-section.hero-digistyle .carousel-control-prev,
+    .hero-section.hero-digistyle .carousel-control-next {
+        display: none !important;
+    }
+
+    /* ── Categories ── */
+    .cat-track {
+        gap: 12px;
+        padding-left: 4px !important;
+        padding-right: 4px !important;
+    }
+
+    .cat-card {
+        flex: 0 0 calc(50% - 10px) !important;
+        box-sizing: border-box;
+        min-width: 0;
+    }
+
+    .cat-section-header .section-title { font-size: 1.2rem; }
+    .cat-arrows-group { display: none; }
+
+    /* ── Featured Products ── */
+    .product-image-wrap { height: 160px; }
+    .product-title      { font-size: 0.85rem; }
+    .product-price      { font-size: 1rem; }
+
+    .btn-buy-now {
+        font-size: 0.76rem;
+        padding: 10px;
+    }
+
+    .btn-cart-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
